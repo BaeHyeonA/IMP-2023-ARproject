@@ -18275,7 +18275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FieldInfo_t* XRReferenceImageSerializable_get
 		String_t* L_2 = ___0_name;
 		NullCheck(L_1);
 		FieldInfo_t* L_3;
-		L_3 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(83 /* System.Reflection.FieldInfo System.Type::GetField(System.String,System.Reflection.BindingFlags) */, L_1, L_2, ((int32_t)1060));
+		L_3 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(82 /* System.Reflection.FieldInfo System.Type::GetField(System.String,System.Reflection.BindingFlags) */, L_1, L_2, ((int32_t)1060));
 		V_0 = L_3;
 		// Assert.IsNotNull(result);
 		FieldInfo_t* L_4 = V_0;
@@ -28715,7 +28715,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SetupARFoundationVersionSpecificCompo
 		L_1 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_0, NULL);
 		NullCheck(L_1);
 		FieldInfo_t* L_2;
-		L_2 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(83 /* System.Reflection.FieldInfo System.Type::GetField(System.String,System.Reflection.BindingFlags) */, L_1, _stringLiteralC99D633342E033DCCBEEA14F2489BBD2AC44D783, ((int32_t)36));
+		L_2 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(82 /* System.Reflection.FieldInfo System.Type::GetField(System.String,System.Reflection.BindingFlags) */, L_1, _stringLiteralC99D633342E033DCCBEEA14F2489BBD2AC44D783, ((int32_t)36));
 		V_0 = L_2;
 		// if (f == null) {
 		FieldInfo_t* L_3 = V_0;
@@ -29384,8 +29384,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Defines_get_arKitInstalled_m4E010D5A0B6D
 {
 	bool V_0 = false;
 	{
-		// return true;
-		V_0 = (bool)1;
+		// return false;
+		V_0 = (bool)0;
 		goto IL_0005;
 	}
 
@@ -30156,7 +30156,7 @@ IL_0076:
 		L_20 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_19, NULL);
 		NullCheck(L_18);
 		bool L_21;
-		L_21 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(119 /* System.Boolean System.Type::Equals(System.Type) */, L_18, L_20);
+		L_21 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(118 /* System.Boolean System.Type::Equals(System.Type) */, L_18, L_20);
 		V_7 = (bool)((((int32_t)L_21) == ((int32_t)0))? 1 : 0);
 		bool L_22 = V_7;
 		if (!L_22)
@@ -30446,7 +30446,7 @@ IL_0178:
 		Type_t* L_66 = V_1;
 		NullCheck(L_65);
 		bool L_67;
-		L_67 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(119 /* System.Boolean System.Type::Equals(System.Type) */, L_65, L_66);
+		L_67 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(118 /* System.Boolean System.Type::Equals(System.Type) */, L_65, L_66);
 		G_B44_0 = ((int32_t)(L_67));
 		goto IL_0193;
 	}
@@ -30880,7 +30880,7 @@ IL_03b6:
 		Type_t* L_164 = V_1;
 		NullCheck(L_164);
 		FieldInfoU5BU5D_t50D47CBECF1AEB152F555803E3329D9E34DBF8D8* L_165;
-		L_165 = VirtualFuncInvoker1< FieldInfoU5BU5D_t50D47CBECF1AEB152F555803E3329D9E34DBF8D8*, int32_t >::Invoke(84 /* System.Reflection.FieldInfo[] System.Type::GetFields(System.Reflection.BindingFlags) */, L_164, ((int32_t)52));
+		L_165 = VirtualFuncInvoker1< FieldInfoU5BU5D_t50D47CBECF1AEB152F555803E3329D9E34DBF8D8*, int32_t >::Invoke(83 /* System.Reflection.FieldInfo[] System.Type::GetFields(System.Reflection.BindingFlags) */, L_164, ((int32_t)52));
 		V_34 = L_165;
 		V_35 = 0;
 		goto IL_047e;
