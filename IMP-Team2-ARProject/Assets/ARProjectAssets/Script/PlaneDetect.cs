@@ -33,20 +33,11 @@ public class PlaneDetect : MonoBehaviour
     {
         Transform target = camera.transform;
 
-        if (check == true)
-        {
-            if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began)
-            {
-                pet = Instantiate(pet1, transform.position, transform.rotation);
-                check = false;
-                condition = false;
-            }
-        }
-
         if (raycastManager.Raycast(new Vector2(Screen.width / 2, Screen.height / 2), hits, TrackableType.PlaneWithinPolygon))
         {
             transform.position = hits[0].pose.position;
-            transform.rotation = hits[0].pose.rotation;
+            //transform.rotation = hits[0].pose.rotation;
+
             //pet1.transform.Rotate(0, 150f, 0);
             //pet1.transform.LookAt(camera.transform);  //need fixing
             pet1.SetActive(true);
@@ -57,30 +48,55 @@ public class PlaneDetect : MonoBehaviour
             indicator.SetActive(false);
         }
 
+
+        if (check == true)
+        {
+            if (indicator.activeSelf && Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began)
+            {
+                //pet = Instantiate(pet1, transform.position, transform.rotation);
+                
+                pet1.transform.position = transform.position;
+                //pet1.transform.rotation = transform.rotation;
+                pet1.transform.LookAt(camera.transform);
+                pet1.SetActive(true);
+
+                check = false;
+                condition = false;
+            }
+        }
+
         if (slider.value >= 0.5)
         {
-            pet.SetActive(false);
-            pet2.SetActive(true);   // step 2 pet is active
-            if (check1 == true)
-            {
-                Instantiate(pet2, pet.transform.position, pet.transform.rotation);
-                check1 = false;
-            }
-            pet2.transform.localScale = pet.transform.localScale;
+            //pet.SetActive(false);
+            //pet2.SetActive(true);   // step 2 pet is active
+            //if (check1 == true)
+            //{
+            //    Instantiate(pet2, pet.transform.position, pet.transform.rotation);
+            //    check1 = false;
+            //}
+            //pet2.transform.localScale = pet.transform.localScale;
+            pet1.SetActive(false);
+            pet2.transform.position = pet1.transform.position;
+            pet2.transform.rotation = pet1.transform.rotation;
+            pet2.SetActive(true);
         }
 
         if (slider.value >= 0.99)
         {
-            pet2.SetActive(false);  //need fixing
-            pet3.SetActive(true);   // step 3 pet is active
-            if (check2 == true)
-            {
-                Instantiate(pet3, pet.transform.position, pet.transform.rotation);
-                check2 = false;
-            }
-            pet3.transform.localScale = pet2.transform.localScale;
+            //pet2.SetActive(false);  //need fixing
+            //pet3.SetActive(true);   // step 3 pet is active
+            //if (check2 == true)
+            //{
+            //    Instantiate(pet3, pet.transform.position, pet.transform.rotation);
+            //    check2 = false;
+            //}
+            //pet3.transform.localScale = pet2.transform.localScale;
 
-            slider.value = 0;
+            //slider.value = 0;
+            pet2.SetActive(false);
+            pet3.transform.position = pet2.transform.position;
+            pet3.transform.rotation = pet2.transform.rotation;
+            pet3.SetActive(true);
         }
     }
 }

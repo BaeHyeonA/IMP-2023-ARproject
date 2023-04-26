@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5516424501963818418
+  m_GuidHigh: 81869069093457059
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5628769435093014500
+      m_GuidHigh: 3394500846071718552
+    m_SerializedTextureGuid:
+      m_GuidLow: 11994425853794520974
+      m_GuidHigh: 13725061364428375162
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: banana
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5348087370446229652
+      m_GuidHigh: 6897929811280888752
+    m_SerializedTextureGuid:
+      m_GuidLow: 18101164111798575923
+      m_GuidHigh: 17423896877839559467
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: carrot
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4753865595754422137
+      m_GuidHigh: 3803420879227153331
+    m_SerializedTextureGuid:
+      m_GuidLow: 1230649610547008559
+      m_GuidHigh: 13138088207072033131
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: hamburger
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5205260075816318465
+      m_GuidHigh: 10548437494202205107
+    m_SerializedTextureGuid:
+      m_GuidLow: 14318213610329281923
+      m_GuidHigh: 3283259983459979034
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: pizza
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4857900640261493428
+      m_GuidHigh: 14485591475483144329
+    m_SerializedTextureGuid:
+      m_GuidLow: 4419271298244961402
+      m_GuidHigh: 9362174673776410
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: apple
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5506221799286335316
+      m_GuidHigh: 9307468719143851936
+    m_SerializedTextureGuid:
+      m_GuidLow: 1131645184099427217
+      m_GuidHigh: 9422404336825937515
+    m_Size: {x: 0.1, y: 0.10107335}
+    m_SpecifySize: 1
+    m_Name: bathbrush
+    m_Texture: {fileID: 0}

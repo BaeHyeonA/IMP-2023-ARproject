@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6733014878611826209}
   - component: {fileID: 6733014878619240913}
+  - component: {fileID: 3231199715542737922}
+  - component: {fileID: -4591474881358908793}
+  - component: {fileID: -4018818233204155543}
   m_Layer: 0
   m_Name: Rabby_Queen_White
   m_TagString: Untagged
@@ -55,6 +58,49 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!54 &3231199715542737922
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6733014878611864065}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &-4591474881358908793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6733014878611864065}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40788445, y: 0.34127164, z: 0.41290247}
+  m_Center: {x: 0.0050178617, y: 0.16879058, z: 0.017562807}
+--- !u!114 &-4018818233204155543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6733014878611864065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e21df6fbbe388c74e8d045a5d68837a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  silder: {fileID: 0}
+  bubble: {fileID: 0}
 --- !u!1 &6733014878611864067
 GameObject:
   m_ObjectHideFlags: 0
