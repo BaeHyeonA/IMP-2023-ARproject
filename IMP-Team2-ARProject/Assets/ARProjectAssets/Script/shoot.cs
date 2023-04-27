@@ -46,8 +46,6 @@ public class shoot : MonoBehaviour
         {
             Duck.transform.position = position;
             Duck.GetComponent<Rigidbody>().AddForce(-transform.up * 100f);
-            // Destroy(Duck);
-            // Duck = Instantiate(Duck, position, rotation);
         }
 
         RaycastHit hit;
@@ -62,7 +60,6 @@ public class shoot : MonoBehaviour
                 {
                     if(hit.collider.gameObject == Duck)
                     {
-                        
                         Debug.Log("hit1");
                         Duck.GetComponent<Rigidbody>().AddForce(transform.up * 100f);
                     }
@@ -79,8 +76,6 @@ public class shoot : MonoBehaviour
             Duck.transform.position = position;
             Duck.GetComponent<Rigidbody>().AddForce(-transform.up * 100f);
             slider2.value += 0.05f;
-            // Destroy(Duck);
-            // Duck = Instantiate(Duck, position, rotation);
         }
     }
 }

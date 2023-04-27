@@ -19,6 +19,8 @@ public class PlaneDetect : MonoBehaviour
     public bool check = true;   //check touch condition
     public bool check1 = true;  //make only one step 2 pet
     public bool check2 = true;  //make only one step 3 pet
+    public bool step1 = true;
+    public bool step2 = false;
     public Slider slider;
 
     void Start()
@@ -67,6 +69,8 @@ public class PlaneDetect : MonoBehaviour
 
         if (slider.value >= 0.5)
         {
+            step1 = false;
+            step2 = true;
             //pet.SetActive(false);
             //pet2.SetActive(true);   // step 2 pet is active
             //if (check1 == true)

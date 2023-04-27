@@ -5,11 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class changeAR : MonoBehaviour
 {
-    public GameObject onemodel;
-    public GameObject twomodel;
-    public GameObject threemodel;
-    public GameObject click;
-
     public bool oneclick;
     public bool twoclick;
     public bool threeclick;
