@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class shoot : MonoBehaviour
 {
@@ -9,16 +10,19 @@ public class shoot : MonoBehaviour
     public Camera arcamera;
     Rigidbody rb;
 
+    public Slider slider;
+
     public LayerMask shootable;
     public float range = 500;
     bool check;
     public Vector3 position;
     public Quaternion rotation;
 
-    public Slider slider2;
+    public float shootLiking;
 
     void Start()
     {
+        DontDestroyOnLoad(this);
         check = false;
         position = Duck.transform.position;
         rotation = Duck.transform.rotation;
@@ -26,6 +30,7 @@ public class shoot : MonoBehaviour
 
     void Update()
     {
+        shootLiking = slider.value;
         if(check)
         {
             Duck.transform.Translate(0.001f,0,0);
@@ -33,11 +38,11 @@ public class shoot : MonoBehaviour
             Duck.transform.Translate(-0.001f,0,0);
         }
 
-        if(Duck.transform.position.x > 0.2)
+        if(Duck.transform.position.x > 0.4)
         {
             check = true;
         }
-        else if(Duck.transform.position.x < -0.2)
+        else if(Duck.transform.position.x < -0.4)
         {
             check = false;
         }
@@ -45,7 +50,9 @@ public class shoot : MonoBehaviour
         if(Duck.transform.position.z > 4)
         {
             Duck.transform.position = position;
-            Duck.GetComponent<Rigidbody>().AddForce(-transform.up * 100f);
+            Duck.transform.rotation = rotation;
+            Duck.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
+            Duck.GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
         }
 
         RaycastHit hit;
@@ -74,8 +81,53 @@ public class shoot : MonoBehaviour
         {
             Debug.Log("Bomb");
             Duck.transform.position = position;
-            Duck.GetComponent<Rigidbody>().AddForce(-transform.up * 100f);
-            slider2.value += 0.05f;
+            Duck.transform.rotation = rotation;
+            Duck.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
+            Duck.GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
+            slider.value += 0.05f;
         }
     }
+
+    public void back()
+    {
+        if(GameObject.Find("White"))
+        {
+            if(GameObject.Find("Rabby_Young_White"))
+            {
+                Destroy(GameObject.Find("Rabby_Young_White"));
+            }
+            if(GameObject.Find("Rabby_White 1"))
+            {
+                Destroy(GameObject.Find("Rabby_White 1"));
+            }
+            SceneManager.LoadScene("White");
+        }
+
+        if(GameObject.Find("Brown"))
+        {
+            if(GameObject.Find("Rabby_Young_Brown"))
+            {
+                Destroy(GameObject.Find("Rabby_Young_Brown"));
+            }
+            if(GameObject.Find("Rabby_Brown 1"))
+            {
+                Destroy(GameObject.Find("Rabby_Brown 1"));
+            }
+            SceneManager.LoadScene("Brown");
+        }
+
+        if(GameObject.Find("Green"))
+        {
+            if(GameObject.Find("Rabby_Young_Green"))
+            {
+                Destroy(GameObject.Find("Rabby_Young_Green"));
+            }
+            if(GameObject.Find("Rabby_Green 1"))
+            {
+                Destroy(GameObject.Find("Rabby_Green 1"));
+            }
+            SceneManager.LoadScene("Green");
+        }
+    }
+
 }
