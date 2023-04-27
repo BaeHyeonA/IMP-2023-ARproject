@@ -28,7 +28,7 @@ public class MainUIController : MonoBehaviour
     public void StartBtn()
     {
         audio.Play();
-        SceneManager.LoadScene("SampleScene"); //move to select scene
+        SceneManager.LoadScene("Select"); //move to select scene
     }
 
     public void OptBtn()

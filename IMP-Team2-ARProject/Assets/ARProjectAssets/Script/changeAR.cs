@@ -42,22 +42,17 @@ public class changeAR : MonoBehaviour
         
         if(oneclick)
         {
-            Debug.Log("1");
+            SceneManager.LoadScene("White");
         }
 
         if(twoclick)
         {
-            Debug.Log("2");
+            SceneManager.LoadScene("Brown");
         }
 
         if(threeclick)
         {
-            Debug.Log("3");
-        }
-
-        if(oneclick || twoclick || threeclick){
-            SceneManager.LoadScene("MainScene");
-            DontDestroyOnLoad(click);
+            SceneManager.LoadScene("Green");
         }
     }
 }
