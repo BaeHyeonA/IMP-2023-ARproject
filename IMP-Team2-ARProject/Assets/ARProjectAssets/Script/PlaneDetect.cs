@@ -42,7 +42,7 @@ public class PlaneDetect : MonoBehaviour
 
             //pet1.transform.Rotate(0, 150f, 0);
             //pet1.transform.LookAt(camera.transform);  //need fixing
-            pet1.SetActive(true);
+            
             indicator.SetActive(condition);  //true but when check is false, condition is false
         }
         else
@@ -56,7 +56,7 @@ public class PlaneDetect : MonoBehaviour
             if (indicator.activeSelf && Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 //pet = Instantiate(pet1, transform.position, transform.rotation);
-                
+                pet1.SetActive(true);
                 pet1.transform.position = transform.position;
                 //pet1.transform.rotation = transform.rotation;
                 pet1.transform.LookAt(camera.transform);

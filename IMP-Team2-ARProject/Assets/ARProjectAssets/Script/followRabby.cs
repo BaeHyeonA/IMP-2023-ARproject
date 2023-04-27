@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class followRabby : MonoBehaviour
 {
@@ -9,4 +10,5 @@ public class followRabby : MonoBehaviour
     {
         transform.position = rabby.transform.position;
     }
+    
 }

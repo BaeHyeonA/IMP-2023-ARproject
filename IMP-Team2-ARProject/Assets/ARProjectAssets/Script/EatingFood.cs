@@ -2,11 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EatingFood : MonoBehaviour
 {
     public Slider slider;
     public ParticleSystem bubble;
+    public GameObject color;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(color);
+    }
+
+    private void Update()
+    {
+        if(SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            transform.position = new Vector3(0, -0.35f, 3);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+    }
 
     private void OnTriggerEnter(Collider collision)
     {

@@ -1,51 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class shoot : MonoBehaviour
 {
-    public GameObject Duck;
+    public GameObject rabby;
     public Camera arcamera;
-    Rigidbody rb;
-
     public LayerMask shootable;
-    public float range = 500;
-    bool check;
-    public Vector3 position;
-    public Quaternion rotation;
+    public Button PlayButton;
+    public Button BackButton;
 
-    public Slider slider2;
+    private float range = 500;
+    private float movedir = -1;
 
-    void Start()
-    {
-        check = false;
-        position = Duck.transform.position;
-        rotation = Duck.transform.rotation;
-    }
+    public Slider slider;
 
     void Update()
     {
-        if(check)
+        if (transform.position.x > 0.15)
         {
-            Duck.transform.Translate(0.001f,0,0);
-        }else{
-            Duck.transform.Translate(-0.001f,0,0);
+            movedir = -1;
         }
+        else if (transform.position.x < -0.15)
+        {
+            movedir = 1;
+        }
+        transform.Translate(0.001f * movedir, 0, 0);
 
-        if(Duck.transform.position.x > 0.2)
+        if (transform.position.z > 2)
         {
-            check = true;
-        }
-        else if(Duck.transform.position.x < -0.2)
-        {
-            check = false;
-        }
-
-        if(Duck.transform.position.z > 4)
-        {
-            Duck.transform.position = position;
-            Duck.GetComponent<Rigidbody>().AddForce(-transform.up * 100f);
+            transform.position = rabby.transform.position + new Vector3(0, 0, -0.5f);
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
 
         RaycastHit hit;
@@ -58,10 +45,9 @@ public class shoot : MonoBehaviour
 
                 if(Physics.Raycast(ray, out hit, range, shootable))
                 {
-                    if(hit.collider.gameObject == Duck)
+                    if (hit.collider.gameObject == this.gameObject)
                     {
-                        Debug.Log("hit1");
-                        Duck.GetComponent<Rigidbody>().AddForce(transform.up * 100f);
+                        GetComponent<Rigidbody>().AddForce(Vector3.forward * 50f);
                     }
                 }
             }
@@ -73,9 +59,24 @@ public class shoot : MonoBehaviour
         if(other.CompareTag("Pet"))
         {
             Debug.Log("Bomb");
-            Duck.transform.position = position;
-            Duck.GetComponent<Rigidbody>().AddForce(-transform.up * 100f);
-            slider2.value += 0.05f;
+            transform.position = rabby.transform.position + new Vector3(0, 0, -0.5f);
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            slider.value += 0.05f;
         }
     }
+
+    public void back()
+    {
+        this.gameObject.SetActive(false);
+        PlayButton.gameObject.SetActive(true);
+        BackButton.gameObject.SetActive(false);
+    }
+    public void play()
+    {
+        this.gameObject.SetActive(true);
+        PlayButton.gameObject.SetActive(false);
+        BackButton.gameObject.SetActive(true);
+        transform.position = rabby.transform.position + new Vector3(0, 0, -0.5f);
+    }
+
 }
