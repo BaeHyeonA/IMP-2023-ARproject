@@ -1289,7 +1289,6 @@ GameObject:
   - component: {fileID: 769244547}
   - component: {fileID: 769244550}
   - component: {fileID: 769244549}
-  - component: {fileID: 769244548}
   m_Layer: 5
   m_Name: EffectSlider
   m_TagString: Untagged
@@ -1320,14 +1319,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -563}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!81 &769244548
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769244546}
-  m_Enabled: 1
 --- !u!114 &769244549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1646,7 +1637,6 @@ GameObject:
   - component: {fileID: 1030274987}
   - component: {fileID: 1030274984}
   - component: {fileID: 1030274985}
-  - component: {fileID: 1030274986}
   m_Layer: 5
   m_Name: BGMSlider
   m_TagString: Untagged
@@ -1732,14 +1722,6 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 2bb2e7f9dbf6b7340bd9281e5a181446, type: 2}
   bgm: {fileID: 1030274984}
   effect: {fileID: 769244550}
---- !u!81 &1030274986
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030274983}
-  m_Enabled: 1
 --- !u!224 &1030274987
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2774,7 +2756,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629231469}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1282a728e1449ec4bae2158a6c59fb32, type: 3}
   m_Name: 
@@ -2829,6 +2811,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: SettingController, Assembly-CSharp
         m_MethodName: SetOut
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114700052}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

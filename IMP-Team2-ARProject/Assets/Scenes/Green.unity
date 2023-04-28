@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 175569368}
   - component: {fileID: 175569365}
   - component: {fileID: 175569366}
-  - component: {fileID: 175569367}
   m_Layer: 5
   m_Name: BGMSlider
   m_TagString: Untagged
@@ -220,14 +219,6 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 2bb2e7f9dbf6b7340bd9281e5a181446, type: 2}
   bgm: {fileID: 175569365}
   effect: {fileID: 1103313745}
---- !u!81 &175569367
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175569364}
-  m_Enabled: 1
 --- !u!224 &175569368
 RectTransform:
   m_ObjectHideFlags: 0
@@ -619,7 +610,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545070876}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1282a728e1449ec4bae2158a6c59fb32, type: 3}
   m_Name: 
@@ -674,6 +665,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: SettingController, Assembly-CSharp
         m_MethodName: SetOut
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 570851746}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1763,7 +1766,6 @@ GameObject:
   - component: {fileID: 1103313742}
   - component: {fileID: 1103313745}
   - component: {fileID: 1103313744}
-  - component: {fileID: 1103313743}
   m_Layer: 5
   m_Name: EffectSlider
   m_TagString: Untagged
@@ -1794,14 +1796,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -563}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!81 &1103313743
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103313741}
-  m_Enabled: 1
 --- !u!114 &1103313744
 MonoBehaviour:
   m_ObjectHideFlags: 0
