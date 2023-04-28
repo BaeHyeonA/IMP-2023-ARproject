@@ -261,6 +261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 160430277}
   - component: {fileID: 160430276}
+  - component: {fileID: 160430278}
   m_Layer: 0
   m_Name: BGMAudio
   m_TagString: Untagged
@@ -380,6 +381,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160430278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160430275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb65b3a679def6c47a7142ad28ae9f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGM: {fileID: 160430275}
+  audio: {fileID: 0}
 --- !u!1 &294579304
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,6 +602,7 @@ GameObject:
   - component: {fileID: 388525034}
   - component: {fileID: 388525033}
   - component: {fileID: 388525035}
+  - component: {fileID: 388525036}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -677,6 +693,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AnchorPrefab: {fileID: 0}
+--- !u!81 &388525036
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388525029}
+  m_Enabled: 1
 --- !u!1 &396489716
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,8 +844,8 @@ RectTransform:
   m_LocalScale: {x: 0.87623, y: 0.5034467, z: 0.87623}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1522251483}
   - {fileID: 1765151498}
+  - {fileID: 1522251483}
   m_Father: {fileID: 1152622677}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1145,7 +1169,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1811926056}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1228,7 +1252,7 @@ RectTransform:
   m_Children:
   - {fileID: 1427647934}
   m_Father: {fileID: 1811926056}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1668,7 +1692,7 @@ RectTransform:
   - {fileID: 308570579}
   - {fileID: 403170605}
   m_Father: {fileID: 1811926056}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2143,7 +2167,6 @@ GameObject:
   - component: {fileID: 1152622676}
   - component: {fileID: 1152622675}
   - component: {fileID: 1152622674}
-  - component: {fileID: 1152622679}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2241,14 +2264,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!81 &1152622679
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1152622673}
-  m_Enabled: 1
 --- !u!1 &1287751773
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,11 +2722,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 469195154}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: -957}
+  m_AnchoredPosition: {x: 516, y: 940}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1522251484
@@ -2721,7 +2736,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522251482}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8057123b366519247adb5d0d27e92803, type: 3}
   m_Name: 
@@ -2777,6 +2792,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: MainUIController, Assembly-CSharp
         m_MethodName: CredOut
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 469195153}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3080,7 +3107,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 469195154}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3241,10 +3268,10 @@ RectTransform:
   m_LocalScale: {x: 0.87623, y: 0.5034467, z: 0.87623}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 764190389}
   - {fileID: 974607188}
   - {fileID: 2117978069}
   - {fileID: 718249838}
+  - {fileID: 764190389}
   - {fileID: 828952181}
   m_Father: {fileID: 1152622677}
   m_RootOrder: 7
@@ -3440,7 +3467,7 @@ RectTransform:
   - {fileID: 1833906225}
   - {fileID: 1287751774}
   m_Father: {fileID: 1811926056}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

@@ -9,6 +9,8 @@ public class SoundController : MonoBehaviour
     public AudioMixer audioMixer;
     public Slider bgm;
     public Slider effect;
+    public float bgmvalue;
+    public float effectvalue;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +21,11 @@ public class SoundController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bgmvalue = bgm.value;
+        effectvalue = effect.value;
 
+        bgm.value = bgmvalue;
+        effect.value = effectvalue;
     }
 
     public void SetBGM()
