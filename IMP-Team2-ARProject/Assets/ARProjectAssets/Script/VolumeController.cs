@@ -12,22 +12,15 @@ public class VolumeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+    }
+
+    void OnEnable()
+    {
         vol = GameObject.Find("Volume");
-        StoreVolume bgmScript = vol.GetComponent<StoreVolume>();
-        bgmScript.Update();
+        StoreVolume bgmScript = vol.GetComponent<StoreVolume>();    //get the bgm & effect volume value
 
         bgm.value = bgmScript.bgmvalue;
         effect.value = bgmScript.effectvalue;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        /*vol = GameObject.Find("Volume");
-        StoreVolume bgmScript = vol.GetComponent<StoreVolume>();
-        bgmScript.Update();
-
-        bgm.value = bgmScript.bgmvalue;
-        effect.value = bgmScript.effectvalue;*/
     }
 }

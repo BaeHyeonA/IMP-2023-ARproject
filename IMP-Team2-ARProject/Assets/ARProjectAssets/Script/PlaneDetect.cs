@@ -41,7 +41,7 @@ public class PlaneDetect : MonoBehaviour
             //transform.rotation = hits[0].pose.rotation;
 
             //pet1.transform.Rotate(0, 150f, 0);
-            //pet1.transform.LookAt(camera.transform);  //need fixing
+            //pet1.transform.LookAt(camera.transform);
             
             indicator.SetActive(condition);  //true but when check is false, condition is false
         }
@@ -87,7 +87,7 @@ public class PlaneDetect : MonoBehaviour
 
         if (slider.value >= 0.99)
         {
-            //pet2.SetActive(false);  //need fixing
+            //pet2.SetActive(false);
             //pet3.SetActive(true);   // step 3 pet is active
             //if (check2 == true)
             //{

@@ -1776,8 +1776,6 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 2bb2e7f9dbf6b7340bd9281e5a181446, type: 2}
   bgm: {fileID: 974607189}
   effect: {fileID: 2117978070}
-  bgmvalue: 0
-  effectvalue: 0
 --- !u!1 &1001256159
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,7 +2732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8057123b366519247adb5d0d27e92803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OptionPanel: {fileID: 1811926055}
+  OptionPanel: {fileID: 0}
   CreditPanel: {fileID: 469195153}
   audio: {fileID: 840693596}
 --- !u!114 &1522251485
@@ -3393,7 +3391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6afee21af2ae4cf4d808111915fbd576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vol: {fileID: 1839932176}
   bgm: {fileID: 974607189}
   effect: {fileID: 2117978070}
   bgmvalue: 0
@@ -3593,8 +3590,6 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 2bb2e7f9dbf6b7340bd9281e5a181446, type: 2}
   bgm: {fileID: 974607189}
   effect: {fileID: 2117978070}
-  bgmvalue: 0
-  effectvalue: 0
 --- !u!4 &212175866532230322
 Transform:
   m_ObjectHideFlags: 0
