@@ -10,8 +10,6 @@ public class EatingFood : MonoBehaviour
     public ParticleSystem bubble;
     public GameObject color;
 
-    public float liking = 0;
-
     private void Awake()
     {
         DontDestroyOnLoad(this);
@@ -22,10 +20,9 @@ public class EatingFood : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().buildIndex == 4)
         {
-            transform.position = new Vector3(0,-0.35f,3);
-            transform.localEulerAngles = new Vector3(0,180,0);
+            transform.position = new Vector3(0, -0.35f, 3);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
-        liking = slider.value;
     }
 
     private void OnTriggerEnter(Collider collision)

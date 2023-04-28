@@ -1,58 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class shoot : MonoBehaviour
 {
-    public GameObject Duck;
+    public GameObject rabby;
     public Camera arcamera;
-    Rigidbody rb;
+
+    public LayerMask shootable;
+    public Button PlayButton;
+    public Button BackButton;
+
+    private float range = 500;
+    private float movedir = -1;
 
     public Slider slider;
 
-    public LayerMask shootable;
-    public float range = 500;
-    bool check;
-    public Vector3 position;
-    public Quaternion rotation;
-
-    public float shootLiking;
-
-    void Start()
-    {
-        DontDestroyOnLoad(this);
-        check = false;
-        position = Duck.transform.position;
-        rotation = Duck.transform.rotation;
-    }
-
     void Update()
     {
-        shootLiking = slider.value;
-        if(check)
+        if (transform.position.x > 0.15)
         {
-            Duck.transform.Translate(0.001f,0,0);
-        }else{
-            Duck.transform.Translate(-0.001f,0,0);
+            movedir = -1;
         }
+        else if (transform.position.x < -0.15)
+        {
+            movedir = 1;
+        }
+        transform.Translate(0.001f * movedir, 0, 0);
 
-        if(Duck.transform.position.x > 0.4)
+        if (transform.position.z > 2)
         {
-            check = true;
-        }
-        else if(Duck.transform.position.x < -0.4)
-        {
-            check = false;
-        }
-
-        if(Duck.transform.position.z > 4)
-        {
-            Duck.transform.position = position;
-            Duck.transform.rotation = rotation;
-            Duck.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
-            Duck.GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
+            transform.position = rabby.transform.position + new Vector3(0, 0, -0.5f);
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
 
         RaycastHit hit;
@@ -65,10 +47,9 @@ public class shoot : MonoBehaviour
 
                 if(Physics.Raycast(ray, out hit, range, shootable))
                 {
-                    if(hit.collider.gameObject == Duck)
+                    if (hit.collider.gameObject == this.gameObject)
                     {
-                        Debug.Log("hit1");
-                        Duck.GetComponent<Rigidbody>().AddForce(transform.up * 100f);
+                        GetComponent<Rigidbody>().AddForce(Vector3.forward * 50f);
                     }
                 }
             }
@@ -80,54 +61,25 @@ public class shoot : MonoBehaviour
         if(other.CompareTag("Pet"))
         {
             Debug.Log("Bomb");
-            Duck.transform.position = position;
-            Duck.transform.rotation = rotation;
-            Duck.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
-            Duck.GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
+
+            transform.position = rabby.transform.position + new Vector3(0, 0, -0.5f);
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
             slider.value += 0.05f;
         }
     }
 
     public void back()
     {
-        if(GameObject.Find("White"))
-        {
-            if(GameObject.Find("Rabby_Young_White"))
-            {
-                Destroy(GameObject.Find("Rabby_Young_White"));
-            }
-            if(GameObject.Find("Rabby_White 1"))
-            {
-                Destroy(GameObject.Find("Rabby_White 1"));
-            }
-            SceneManager.LoadScene("White");
-        }
-
-        if(GameObject.Find("Brown"))
-        {
-            if(GameObject.Find("Rabby_Young_Brown"))
-            {
-                Destroy(GameObject.Find("Rabby_Young_Brown"));
-            }
-            if(GameObject.Find("Rabby_Brown 1"))
-            {
-                Destroy(GameObject.Find("Rabby_Brown 1"));
-            }
-            SceneManager.LoadScene("Brown");
-        }
-
-        if(GameObject.Find("Green"))
-        {
-            if(GameObject.Find("Rabby_Young_Green"))
-            {
-                Destroy(GameObject.Find("Rabby_Young_Green"));
-            }
-            if(GameObject.Find("Rabby_Green 1"))
-            {
-                Destroy(GameObject.Find("Rabby_Green 1"));
-            }
-            SceneManager.LoadScene("Green");
-        }
+        this.gameObject.SetActive(false);
+        PlayButton.gameObject.SetActive(true);
+        BackButton.gameObject.SetActive(false);
+    }
+    public void play()
+    {
+        this.gameObject.SetActive(true);
+        PlayButton.gameObject.SetActive(false);
+        BackButton.gameObject.SetActive(true);
+        transform.position = rabby.transform.position + new Vector3(0, 0, -0.5f);
     }
 
 }

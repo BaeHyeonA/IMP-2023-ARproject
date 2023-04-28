@@ -11,9 +11,4 @@ public class followRabby : MonoBehaviour
     {
         transform.position = rabby.transform.position;
     }
-
-    public void change()
-    {
-        SceneManager.LoadScene("MainShoot");
-    }
 }
