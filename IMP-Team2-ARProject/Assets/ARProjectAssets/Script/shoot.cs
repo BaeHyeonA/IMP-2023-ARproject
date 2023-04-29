@@ -12,11 +12,14 @@ public class shoot : MonoBehaviour
     public LayerMask shootable;
     public Button PlayButton;
     public Button BackButton;
+    public AudioSource audioSource;
 
     private float range = 500;
     private float movedir = -1;
 
     public Slider slider;
+
+
 
     void Update()
     {
@@ -59,6 +62,7 @@ public class shoot : MonoBehaviour
     {
         if(other.CompareTag("Pet"))
         {
+            audioSource.Play();
             Debug.Log("Bomb");
             transform.position = rabby.transform.position + new Vector3(0, 0, -0.5f);
             GetComponent<Rigidbody>().velocity = Vector3.zero;

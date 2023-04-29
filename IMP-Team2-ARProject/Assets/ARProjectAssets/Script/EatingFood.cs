@@ -11,6 +11,7 @@ public class EatingFood : MonoBehaviour
     public GameObject color;
     public AudioSource audio;
     public AudioSource audio2;
+    public AudioSource audio3;
 
 
 
@@ -59,7 +60,7 @@ public class EatingFood : MonoBehaviour
             }
             else if (collision.gameObject.name == "bathbrush")
             {
-                audio2.Play();
+                audio3.Play();
 
                 slider.value += 0.1f;
                 bubble.Play();
