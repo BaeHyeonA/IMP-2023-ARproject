@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class PlaneDetect : MonoBehaviour
 {
@@ -101,6 +103,26 @@ public class PlaneDetect : MonoBehaviour
             pet3.transform.position = pet2.transform.position;
             pet3.transform.rotation = pet2.transform.rotation;
             pet3.SetActive(true);
+
+            Invoke("finalScene", 5);
+        }
+    }
+
+    void finalScene()
+    {
+        if(pet3 == GameObject.Find("Rabby_Queen_Brown"))
+        {
+            SceneManager.LoadScene("Brown_Final");
+        }
+        if (pet3 == GameObject.Find("Rabby_Queen_White"))
+        {
+            SceneManager.LoadScene("White_Final");
+
+        }
+        if (pet3 == GameObject.Find("Rabby_Queen_Green"))
+        {
+            SceneManager.LoadScene("White_Final");
+
         }
     }
 }

@@ -29,10 +29,10 @@ static Il2CppMethodPointer s_methodPointers[4] =
 };
 static const int32_t s_InvokerIndices[4] = 
 {
-	7672,
-	7672,
-	7396,
-	4797,
+	7679,
+	7679,
+	7403,
+	4804,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_ARFoundationRemote_Runtime_BugReports_CodeGenModule;
 const Il2CppCodeGenModule g_ARFoundationRemote_Runtime_BugReports_CodeGenModule = 
