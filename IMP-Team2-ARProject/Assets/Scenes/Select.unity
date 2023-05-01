@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -134,7 +134,6 @@ GameObject:
   m_Component:
   - component: {fileID: 22732924}
   - component: {fileID: 22732920}
-  - component: {fileID: 22732923}
   - component: {fileID: 22732922}
   - component: {fileID: 22732921}
   m_Layer: 0
@@ -218,24 +217,6 @@ MonoBehaviour:
   m_AutoFocus: 1
   m_LightEstimation: 0
   m_FacingDirection: 1
---- !u!114 &22732923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22732919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a2a9c34df4095f47b9ca8f975175f5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Device: 0
-  m_PoseSource: 6
-  m_PoseProviderComponent: {fileID: 0}
-  m_TrackingType: 0
-  m_UpdateType: 0
-  m_UseRelativeTransform: 0
 --- !u!4 &22732924
 Transform:
   m_ObjectHideFlags: 0
@@ -757,10 +738,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67073885bc6a9854baca4926578e963d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onemodel: {fileID: 0}
-  twomodel: {fileID: 0}
-  threemodel: {fileID: 0}
-  click: {fileID: 0}
   oneclick: 0
   twoclick: 0
   threeclick: 0
