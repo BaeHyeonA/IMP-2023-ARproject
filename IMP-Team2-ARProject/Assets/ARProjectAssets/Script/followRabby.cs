@@ -9,6 +9,7 @@ public class followRabby : MonoBehaviour
 
     void Update()
     {
+        //set the bubble particle is in the rabby's position
         transform.position = rabby.transform.position;
     }
 

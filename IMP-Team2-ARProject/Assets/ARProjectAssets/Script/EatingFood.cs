@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class EatingFood : MonoBehaviour
 {
-    public Slider slider;
-    public ParticleSystem bubble;
+    public Slider slider; //liking value
+    public ParticleSystem bubble; //bubble particle
     public GameObject color;
     public AudioSource audio;
     public AudioSource audio2;
@@ -23,6 +23,7 @@ public class EatingFood : MonoBehaviour
 
     private void Update()
     {
+        //setting position
         if(SceneManager.GetActiveScene().buildIndex == 4)
         {
             transform.position = new Vector3(0, -0.35f, 3);
@@ -32,38 +33,35 @@ public class EatingFood : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("food"))
+        if (collision.gameObject.CompareTag("food")) //when rabby eats food (& takes a wash)
         {
-            //ȿ����
-            Debug.Log(collision.gameObject.name);
-
-            if (collision.gameObject.name == "apple" || collision.gameObject.name == "banana")
+            // apple and banana increase liking value by 0.05
+            if (collision.gameObject.name == "apple" || collision.gameObject.name == "banana") 
             {
                 audio2.Play();
-
-                Debug.Log(collision.gameObject.name + "+1");
                 slider.value += 0.05f;
             }
+
+            // carrot decreases liking value by 0.05
             else if (collision.gameObject.name == "carrot")
             {
                 audio.Play();
-
-                Debug.Log(collision.gameObject.name + "-1");
                 slider.value -= 0.05f;
             }
+
+            // hamburger and pizza increase liking value by 0.1
             else if (collision.gameObject.name == "hamburger" || collision.gameObject.name == "pizza")
             {
                 audio2.Play();
-
-                Debug.Log(collision.gameObject.name + "+2");
                 slider.value += 0.1f;
             }
+
+            // bathbrush increases liking value by 0.05 and plays bubble particle
             else if (collision.gameObject.name == "bathbrush")
             {
                 audio3.Play();
-
-                slider.value += 0.1f;
                 bubble.Play();
+                slider.value += 0.1f;
             }
 
         }
