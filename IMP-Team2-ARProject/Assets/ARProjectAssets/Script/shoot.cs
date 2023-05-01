@@ -62,7 +62,7 @@ public class shoot : MonoBehaviour
     {
         if(other.CompareTag("Pet")) //if rubberDuck touches rabby
         {
-            audioSource.Play();
+            audioSource.Play();//Play sound when it collides with rubberduck
             Debug.Log("Bomb");
 
             // return rubberduck's posiion

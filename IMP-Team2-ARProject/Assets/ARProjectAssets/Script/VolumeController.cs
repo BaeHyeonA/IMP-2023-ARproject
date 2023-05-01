@@ -20,7 +20,7 @@ public class VolumeController : MonoBehaviour
         vol = GameObject.Find("Volume");
         StoreVolume bgmScript = vol.GetComponent<StoreVolume>();    //get the bgm & effect volume value
 
-        bgm.value = bgmScript.bgmvalue;
-        effect.value = bgmScript.effectvalue;
+        bgm.value = bgmScript.bgmvalue;    //use the stored bgm sound value
+        effect.value = bgmScript.effectvalue;   //use the stored effect sound value
     }
 }

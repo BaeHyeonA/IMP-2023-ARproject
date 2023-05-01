@@ -9,9 +9,9 @@ public class EatingFood : MonoBehaviour
     public Slider slider; //liking value
     public ParticleSystem bubble; //bubble particle
     public GameObject color;
-    public AudioSource audio;
-    public AudioSource audio2;
-    public AudioSource audio3;
+    public AudioSource audio;//carrot sound effect
+    public AudioSource audio2;//other food sound effect
+    public AudioSource audio3;//bathbrush sound effect
 
 
 
@@ -38,28 +38,28 @@ public class EatingFood : MonoBehaviour
             // apple and banana increase liking value by 0.05
             if (collision.gameObject.name == "apple" || collision.gameObject.name == "banana") 
             {
-                audio2.Play();
+                audio2.Play();//Play sound when it collides with apples
                 slider.value += 0.05f;
             }
 
             // carrot decreases liking value by 0.05
             else if (collision.gameObject.name == "carrot")
             {
-                audio.Play();
+                audio.Play();//Play sound when it collides with carrot
                 slider.value -= 0.05f;
             }
 
             // hamburger and pizza increase liking value by 0.1
             else if (collision.gameObject.name == "hamburger" || collision.gameObject.name == "pizza")
             {
-                audio2.Play();
+                audio2.Play(); //Play sound when it collides with hamburger
                 slider.value += 0.1f;
             }
 
             // bathbrush increases liking value by 0.05 and plays bubble particle
             else if (collision.gameObject.name == "bathbrush")
             {
-                audio3.Play();
+                audio3.Play();//Play sound when it collides with bathbrush
                 bubble.Play();
                 slider.value += 0.1f;
             }

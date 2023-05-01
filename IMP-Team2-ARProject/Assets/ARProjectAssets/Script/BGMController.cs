@@ -11,15 +11,15 @@ public class BGMController : MonoBehaviour
     void Start()
     {
         audio = BGM.GetComponent<AudioSource>();
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(this);    //keep playing audio when the scene is changed
     }
 
     void Update()
     {
-        if (audio.isPlaying) return;
+        if (audio.isPlaying) return;    //if audio is playing, keep playing
         else
         {
-            audio.Play();
+            audio.Play();   //if audio is not playing, start to play the audio
         }
     }
 }

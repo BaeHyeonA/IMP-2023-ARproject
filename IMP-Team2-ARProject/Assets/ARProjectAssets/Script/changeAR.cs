@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +10,7 @@ public class changeAR : MonoBehaviour
     public bool twoclick;
     public bool threeclick;
 
+    //Run when white pets are selected
     public void oneload(){
         if(oneclick == false){
             oneclick = true;
@@ -16,7 +18,7 @@ public class changeAR : MonoBehaviour
             threeclick = false;
         }
     }
-
+    //Run when brown pets are selected
     public void twoload(){
         if(twoclick == false){
             oneclick = false;
@@ -24,7 +26,7 @@ public class changeAR : MonoBehaviour
             threeclick = false;
         }
     }
-
+    //Run when green pets are selected
     public void threeload(){
         if(threeclick == false){
             oneclick = false;
@@ -34,18 +36,19 @@ public class changeAR : MonoBehaviour
     }
 
     public void changescene(){
-        
-        if(oneclick)
+
+        //Switch to white scene when white pet is selected
+        if (oneclick)
         {
             SceneManager.LoadScene("White");
         }
-
-        if(twoclick)
+        //Switch to brown scene when brown pet is selected
+        if (twoclick)
         {
             SceneManager.LoadScene("Brown");
         }
-
-        if(threeclick)
+        //Switch to green scene when green pet is selected
+        if (threeclick)
         {
             SceneManager.LoadScene("Green");
         }

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class StoreVolume : MonoBehaviour
 {
-    //public GameObject vol;
     public Slider bgm;
     public Slider effect;
     public float bgmvalue;
@@ -25,7 +24,7 @@ public class StoreVolume : MonoBehaviour
 
     public void Check()
     {
-        bgmvalue = bgm.value;
-        effectvalue = effect.value;
+        bgmvalue = bgm.value;   //store bgm sound value
+        effectvalue = effect.value;    //store effect sound value
     }
 }
