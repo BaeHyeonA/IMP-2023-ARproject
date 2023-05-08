@@ -8,7 +8,7 @@ public class EatingFood : MonoBehaviour
 {
     public Slider slider; //liking value
     public ParticleSystem bubble; //bubble particle
-    public GameObject color;
+    //public GameObject color;
     public AudioSource audio;//carrot sound effect
     public AudioSource audio2;//other food sound effect
     public AudioSource audio3;//bathbrush sound effect
@@ -18,7 +18,7 @@ public class EatingFood : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(this);
-        DontDestroyOnLoad(color);
+        //DontDestroyOnLoad(color);
     }
 
     private void Update()
